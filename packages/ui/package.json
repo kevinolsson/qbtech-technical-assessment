@@ -14,5 +14,8 @@
   },
   "dependencies": {
     "react-aria-components": "^1.6.0"
+  },
+  "devDependencies": {
+    "@storybook/react": "8.6.0-alpha.0"
   }
 }
