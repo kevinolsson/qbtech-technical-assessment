@@ -7,7 +7,6 @@ You can visit the deployed project [here](https://qbtech-technical-assessment.ve
 ## Installation
 
 ```bash
-cd qbtech-technical-assessment
 npm install
 npm run dev
 ```
@@ -17,23 +16,26 @@ npm run dev
 Create a web application where you can book a trip with the airline "QBAir".
 
 ## General
+
 - Written with React and Tailwind.
 - No need for backend (ie submitting the form doesn't need to do anything), but a receipt would be nice!
 
 ### Features
-  - Choose and book a one-way trip
-    - Default option
-    - Departure date cannot be earlier than today
-    - Return date is disabled.
-  - Choose and book a two-way trip
-    - Return date is available.
-    - Return date must be the same or later than departure date.
-  - Contain form validation
-    - Date formatted as yyyy-mm-dd
-    - Validation must make sense in relation to choosing dates for a trip.
-    - Validation must be communicated to the user.
+
+- Choose and book a one-way trip
+  - Default option
+  - Departure date cannot be earlier than today
+  - Return date is disabled.
+- Choose and book a two-way trip
+  - Return date is available.
+  - Return date must be the same or later than departure date.
+- Contain form validation
+  - Date formatted as yyyy-mm-dd
+  - Validation must make sense in relation to choosing dates for a trip.
+  - Validation must be communicated to the user.
 
 ### Additional
+
 - Form inputs can be set from query parameters (ie `?departure=2021-12-31`)
   - If a query parameter is not valid, it should be ignored.
   - Vertically stacked inputs, centered on the page.
@@ -41,25 +43,26 @@ Create a web application where you can book a trip with the airline "QBAir".
 ## Scope
 
 ### Webapp
-  - Home page
-    - A form with the following inputs:
-      - Departure date
-      - Return date (if applicable)
-      - Number of passengers
-      - A submit button
-    - The form inputs can be set from query parameters (ie `?departure=2021-12-31`)
-  - Booking page
-    - The information from the home page
-    - The form inputs can be set from query parameters (including the departure & return date)
-    - A form with the following inputs: (grouped, multiplied by the number of passengers)
-      - Name
-      - Email
-      - Phone number
-      - Nationality
-      - Passport number
-  - Receipt page
-    - Outline all the information from the booking page.
-    - A button to go back to the home page.
+
+- Home page
+  - A form with the following inputs:
+    - Departure date
+    - Return date (if applicable)
+    - Number of passengers
+    - A submit button
+  - The form inputs can be set from query parameters (ie `?departure=2021-12-31`)
+- Booking page
+  - The information from the home page
+  - The form inputs can be set from query parameters (including the departure & return date)
+  - A form with the following inputs: (grouped, multiplied by the number of passengers)
+    - Name
+    - Email
+    - Phone number
+    - Nationality
+    - Passport number
+- Receipt page
+  - Outline all the information from the booking page.
+  - A button to go back to the home page.
 
 ### Project Structure
 
@@ -69,26 +72,59 @@ monorepo/
 │   ├── qbair/        # NextJS project containing the assessment
 │   ├── storybook/    # Storybook containing the UI components
 ├── packages/
-│   ├── ui/           # UI package containing Tailwind && UI reusable UI components
-│   └── utils/        # Utility package containing utility (if any)
+│   └── ui/           # UI package containing Tailwind && UI reusable UI components
 ```
 
 ### Testing
+
 - Snapshot tests for all the UI components. Nice to have: Chromatic???
 - Unit tests for all the business logic + UI components.
 
-### Dependencies used (and why)
-- NextJS > I'm very comfortable with projects such as CRA (Create React App) and Vite. But given that there is no explicit requirement to use a specific framework and that I am to only spend 4 hours on this, I figured I'd go with NextJS as it abstracts a lot of the lower levels details such as routing and allows me to easily deploy to Vercel.
-- TailwindCSS > Part of the requirements. I also really like Tailwind.
-- Storybook > Helps me develop and organize any UI component in isolation. Good way to get some snapshot tests + check accessibility on the individual UI components.
-- React Hook Form + Zod > I'm very comfortable with react-hook-form. Form validation can get tricky very fast and there is no need to reinvent the wheel when packages such as react-hook-form and zod already exists + has been battle tested by the community.
-- React Aria (UI Library) > To begin with, I like going as primitive as possible. That being said, sometimes primitive HTML elements don't fit the bill (yet). A good example are datepickers (`input type="date"`). They rely on browsers to set locale. The problem being is that browsers sometimes don't respect user locale settings. SO I've decided to use React Aria + to save time by using some pre-built components provided by them.I like trying new libraries whenever I get the chance! I've worked a lot with MUI, MantineUI, Daisy, etc but not yet with React Aria. I chose it due to its heavy focus on accessibility and its unstyled nature which makes it styling with Tailwind easy. Also building your own datepicker is a nightmare!
-- RTL + Jest for unit testing. Pretty standard stuff.
+### Dependencies Used (and Why)
+
+#### Core Framework
+
+- **Next.js**
+  I'm very comfortable with projects like CRA (Create React App) and Vite. Since there is no explicit requirement for a specific framework and I only have 4 hours, I chose Next.js. It abstracts lower-level details like routing and allows easy deployment to Vercel.
+
+#### Styling
+
+- **Tailwind CSS**
+  Part of the requirements. I also really like Tailwind.
+
+#### UI Development
+
+- **Storybook**
+  Helps develop and organize UI components in isolation. It's a great tool for snapshot testing and checking accessibility at the component level.
+
+#### Forms & Validation
+
+- **React Hook Form + Zod**
+  I'm very comfortable with React Hook Form. Form validation can get tricky quickly, so there's no need to reinvent the wheel when well-tested libraries like `react-hook-form` and `zod` exist.
+
+#### UI Library
+
+- **React Aria**
+  I prefer going as primitive as possible, but sometimes native HTML elements don’t fit the bill. For example, `input type="date"` relies on browser locale settings, which can be unreliable.
+
+  I chose React Aria because:
+
+  - It has a heavy focus on accessibility.
+  - It’s unstyled, making it easy to integrate with Tailwind.
+  - I enjoy trying new libraries! I've worked with MUI, Mantine, and DaisyUI, but not React Aria yet.
+  - Building your own date picker is a nightmare!
+
+#### Testing
+
+- **RTL (React Testing Library) + Jest**
+  Standard tools for unit testing.
 
 ## Personal notes
+
 Just writing down everything that I've done / plan to do. I'll update this as I go along.
 
 ### Method to the madness
+
 - Read the requirements.
 - Given the requirements, look around and think about best way to solve this assessment.
 - Steal QBTech logos off their website and create a few basic wireframes on Figma for QBAir.
