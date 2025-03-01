@@ -6,6 +6,9 @@ export const RangeCalendarExample = () => {
 
   return (
     <RangeCalendar>
+      <h1 className="text-2xl text-red-500">
+        Hello World
+      </h1>
       <Button slot="previous" />
       <Heading />
       <Button slot="next" />

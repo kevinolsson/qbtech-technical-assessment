@@ -1,5 +1,7 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
+import 'ui/globals.css';
+
 
 const ThemeWrapper = (props: { children: React.ReactNode }) => {
   return (
