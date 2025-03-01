@@ -7,7 +7,7 @@ export default function Home() {
     <div>
       <main>
         <h1>Hello World</h1>
-        <button className="">React Aria button</button>
+        <button className="flex flex-col gap-4 p-10">React Aria button</button>
         <Image src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
         <RangeCalendarExample />
         <ol>

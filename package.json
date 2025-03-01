@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "description": "Technical assessment for Senior Software Engineer Frontend position at Qbtech.",
   "scripts": {
-    "build": "npm run build --workspace=apps/qbair",
-    "dev": "concurrently \"npm run dev --workspace=apps/qbair\" \"npm run dev --workspace=packages/ui\"",
+    "build": "npm run build --workspace=packages/ui && npm run build --workspace=apps/qbair",
+    "dev": "concurrently \"npm run dev --workspace=apps/qbair\" \"npm run dev --workspace=apps/storybook\" \"npm run dev --workspace=packages/ui\"",
     "test": "npm run test --workspaces --if-present",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -19,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

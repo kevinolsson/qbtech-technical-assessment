@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./global.css -o dist/style.css --watch --poll"
+    "dev": "npx @tailwindcss/cli -i ./global.css -o dist/style.css --watch --poll",
+    "build": "npx @tailwindcss/cli -i ./global.css -o dist/style.css"
   },
   "author": "",
   "license": "ISC",

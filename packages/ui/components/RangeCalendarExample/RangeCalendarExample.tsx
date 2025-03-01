@@ -6,7 +6,7 @@ export const RangeCalendarExample = () => {
 
   return (
     <RangeCalendar>
-      <h1 className="text-2xl text-red-500 bg-blue-500 dark:bg-blue-100">
+      <h1 className="text-2xl text-red-200 bg-blue-100 dark:bg-blue-100">
         Hello World
       </h1>
       <Button slot="previous" />
