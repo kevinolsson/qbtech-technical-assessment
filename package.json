@@ -31,5 +31,9 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "prettier": "^3.2.5",
     "typescript": "5.4.3"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
