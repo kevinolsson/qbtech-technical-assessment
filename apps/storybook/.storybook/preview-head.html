@@ -7,11 +7,11 @@
     transition: all 0.2s ease-out;
   }
 
-  html.light #storybook-root {
+  html.light :is(#storybook-root, .docs-story) {
     background-color: rgb(255, 255, 255);
   }
 
-  html.dark #storybook-root {
+  html.dark :is(#storybook-root, .docs-story) {
     background-color: rgb(46, 52, 56);
   }
 </style>

@@ -9,4 +9,31 @@
 @theme {
   --font-noto-sans: 'Noto Sans', serif;
   --font-sans: var(--font-noto-sans);
+
+  --color-brand: #28abe2;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  p,
+  label {
+    @apply max-w-[60ch] text-gray-900 dark:text-white;
+  }
+  h1 {
+    @apply text-3xl md:text-5xl font-semibold;
+  }
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+  h3 {
+    @apply text-xl md:text-xl font-semibold;
+  }
+  p {
+    @apply text-base;
+  }
+  label {
+    @apply text-base font-semibold;
+  }
 }

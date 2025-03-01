@@ -2,10 +2,10 @@ import { Button } from './Button';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Button> = {
-  title: 'Button',
+  title: 'Atoms/Button',
   component: Button,
   parameters: {
-    layout: "fullscreen"
+    layout: 'fullscreen',
   },
   tags: ['autodocs'],
 };
@@ -16,13 +16,19 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = {
   args: {
     children: 'Button',
-    variant: "primary"
+    variant: 'primary',
+    onClick: () => {
+      alert('Hello World!');
+    },
   },
 };
 
 export const secondary: Story = {
   args: {
-    children: "Secondary Button",
-    variant: "secondary"
-  }
-}
+    children: 'Secondary Button',
+    variant: 'secondary',
+    onClick: () => {
+      alert('Hello World!');
+    },
+  },
+};
