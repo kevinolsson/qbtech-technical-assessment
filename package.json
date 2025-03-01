@@ -5,7 +5,7 @@
   "description": "Technical assessment for Senior Software Engineer Frontend position at Qbtech.",
   "scripts": {
     "build": "npm run build --workspace=apps/qbair",
-    "dev": "concurrently \"npm run dev --workspace=apps/qbair\" \"npm run dev --workspace=apps/storybook\"",
+    "dev": "concurrently \"npm run dev --workspace=apps/qbair\" \"npm run dev --workspace=apps/storybook\" \"npm run dev --workspace=packages/ui\"",
     "test": "npm run test --workspaces --if-present",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -31,6 +31,5 @@
     "eslint-plugin-unused-imports": "^4.1.4",
     "prettier": "^3.2.5",
     "typescript": "5.4.3"
-
   }
 }
