@@ -1,6 +1,5 @@
 'use client';
 export * from 'react-aria-components';
-export { RangeCalendarExample } from './components/RangeCalendarExample/RangeCalendarExample';
 
 // UI components needed:
 /*
@@ -10,23 +9,24 @@ Style
   Colors
 
 Atoms
-  Logo
-  Button
+  [X] Logo
+  [X] Button
+  [X] Typography
   Card component
-  Typography
   Input
     Name
     Email
     Phone
-  NumberInput
-  Select (flags)
-  DateRangePinker
+    NumberInput
+  CountrySelect
+  Checkbox
+  [X] RangeCalendar // DONE
   StepperIndicator
   Image
   Background
 
 Molecules
-  DepartureForm
+  [X] DeparturePicker (RangeCalendar + Checkbox + Dialog)
   PassengerForm
   Card with Image
 

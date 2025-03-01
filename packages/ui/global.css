@@ -11,6 +11,7 @@
   --font-sans: var(--font-noto-sans);
 
   --color-brand: #28abe2;
+  --color-container-dark: rgb(46, 52, 56);
 }
 
 @layer base {
@@ -35,5 +36,28 @@
   }
   label {
     @apply text-base font-semibold;
+  }
+}
+
+@layer components {
+  .calendar-cell--selection-start {
+    background:
+      radial-gradient(circle, var(--color-brand) 68%, transparent 50%),
+      linear-gradient(to right, var(--color-white) 50%, var(--color-sky-50) 50%);
+  }
+  .dark .calendar-cell--selection-start {
+    background:
+      radial-gradient(circle, var(--color-brand) 68%, transparent 50%),
+      linear-gradient(to right, var(--color-container-dark) 50%, var(--color-gray-700) 50%);
+  }
+  .calendar-cell--selection-end {
+    background:
+      radial-gradient(circle, var(--color-brand) 68%, transparent 50%),
+      linear-gradient(to left, var(--color-white) 50%, var(--color-sky-50) 50%);
+  }
+  .dark .calendar-cell--selection-end {
+    background:
+      radial-gradient(circle, var(--color-brand) 68%, transparent 50%),
+      linear-gradient(to left, var(--color-container-dark) 50%, var(--color-gray-700) 50%);
   }
 }

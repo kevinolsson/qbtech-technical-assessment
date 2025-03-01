@@ -116,8 +116,10 @@ monorepo/
 
 #### UI Library
 
-- **Origin UI**
-  I like trying out different UI libraries. After my initial sketches, OirginUI seemed to cover majority of the UI elements that I will be needing for this task. The UI package itself is compatible with Tailwind and seems to be grounded on accessibility. Note: I don't think I'd use this in a real-life application without further vetting.
+- **React Aria**
+  I am a strong advocate for using primitive elements whenever possible. However, some native elements (e.g., <input type="date">) aren't always ready for direct use. I also enjoy exploring different UI libraries, and I chose React Aria because I've been wanting to try it for some time.
+
+  React Aria can be consumed without any existing styles, which makes it work nicely with Tailwind. It also places a strong emphasis on accessibility.
 
 #### Testing
 
