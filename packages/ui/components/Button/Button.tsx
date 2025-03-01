@@ -8,7 +8,7 @@ interface ButtonProps extends _ButtonProps {
 const buttonStyle = cva(["py-3 px-9 rounded-full outline-offset-2"], {
   variants: {
     variant: {
-      primary: ["bg-sky-500 text-white border-transparent"],
+      primary: ["bg-sky-500 text-white border-transparent", "dark:bg-amber-950"],
       secondary: ["bg-transparent text-black border ring-black",]
     }
   }
@@ -17,7 +17,7 @@ const buttonStyle = cva(["py-3 px-9 rounded-full outline-offset-2"], {
 const Button = ({ className, variant, children, ...forwardProps }: ButtonProps) => {
 
   return (
-    <_Button className={`bg-amber-400 dark:bg-amber-950 ${className ?? ''}`} {...forwardProps}>
+    <_Button className={`${buttonStyle({ variant })} ${className ?? ''}`} {...forwardProps}>
       {children}
     </_Button>
   )

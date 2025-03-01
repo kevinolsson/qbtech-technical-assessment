@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "dev": "npx tailwindcss -i ./global.css -o ./style.css --watch --content './components/**/*.{js,ts,jsx,tsx,mdx}' '../../apps/qbair/**/*.{js,ts,jsx,tsx,mdx}'"
+    "dev": "npx @tailwindcss/cli -i ./global.css -o dist/style.css --watch --poll"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +20,8 @@
   },
   "exports": {
     "./tailwind.config": "./tailwind.config.ts",
-    "./globals.css": "./global.css"
+    "./postcss.config": "./postcss.config.",
+    "./globals.css": "./global.css",
+    "./style.css": "./dist/style.css"
   }
 }

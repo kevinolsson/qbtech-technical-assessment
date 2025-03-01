@@ -2,6 +2,7 @@ import React from 'react';
 import type { Preview } from '@storybook/react';
 import { themes } from '@storybook/theming';
 import 'ui/globals.css';
+import "ui/style.css";
 
 
 const ThemeWrapper = (props: { children: React.ReactNode }) => {

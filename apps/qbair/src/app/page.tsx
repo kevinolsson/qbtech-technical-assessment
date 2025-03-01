@@ -6,9 +6,8 @@ export default function Home() {
   return (
     <div>
       <main>
-
         <h1>Hello World</h1>
-        <button className="bg-amber-400 dark:bg-amber-950">React Aria button</button>
+        <button className="">React Aria button</button>
         <Image src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
         <RangeCalendarExample />
         <ol>
