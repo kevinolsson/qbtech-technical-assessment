@@ -64,14 +64,22 @@ Create a web application where you can book a trip with the airline "QBAir".
   - Outline all the information from the booking page.
   - A button to go back to the home page.
 
+### Additional
+
+These features are not explicitly required but I've included to enhance the submission:
+
+- **Dark mode** - Implemented dark mode using Tailwind `:dark` variant.
+- **Storybook** - Deployed to showcase the proper breakdown of components into Atoms, Molecules, and Organisms. I like nicely organized projects!
+- **Tests** - Because writing tests is important! (IIRC I don't recall finding this in the requirements!)
+
 ### Limitations
 
-I will not be implementing the following
+Due to time constraints, the following will not be implemented:
 
-- Destinations
-- Selecting a specific flight from a table based of the desired departure and return dates.
-- Saving anything to a database.
-- Any additional receipts outside of the confirmation page (ie no receipt to email)
+- **Fully fleshed-out design system/component library.** UI components will be built with interfaces sufficient for my needs rather than as open-ended components typical of a traditional library.
+- **Destination selection or flight selection from a table.** These features will not be included.
+- **Database persistence.** Data will not be saved to a database, though this can be revisited if needed.
+- **Additional receipts.** The confirmation page will serve as the only receipt; no receipts will be sent via email.
 
 ### Project Structure
 
@@ -83,11 +91,6 @@ monorepo/
 ├── packages/
 │   └── ui/           # UI package containing Tailwind && UI reusable UI components
 ```
-
-### Testing
-
-- Snapshot tests for all the UI components. Nice to have: Chromatic???
-- Unit tests for all the business logic + UI components.
 
 ### Dependencies Used (and Why)
 
