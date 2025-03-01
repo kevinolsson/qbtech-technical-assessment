@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.ts",
   "scripts": {
-    "dev": "npx @tailwindcss/cli -i ./global.css -o ./style.css --watch"
+    "dev": "npx tailwindcss -i ./global.css -o ./style.css --watch --content './components/**/*.{js,ts,jsx,tsx,mdx}' '../../apps/qbair/**/*.{js,ts,jsx,tsx,mdx}'"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "react-dom": "^19"
   },
   "dependencies": {
+    "class-variance-authority": "^0.7.1",
     "postcss": "^8.5.3",
     "react-aria-components": "^1.6.0",
     "tailwindcss": "^4.0.9"

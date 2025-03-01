@@ -64,6 +64,15 @@ Create a web application where you can book a trip with the airline "QBAir".
   - Outline all the information from the booking page.
   - A button to go back to the home page.
 
+### Limitations
+
+I will not be implementing the following
+
+- Destinations
+- Selecting a specific flight from a table based of the desired departure and return dates.
+- Saving anything to a database.
+- Any additional receipts outside of the confirmation page (ie no receipt to email)
+
 ### Project Structure
 
 ```bash
@@ -104,15 +113,8 @@ monorepo/
 
 #### UI Library
 
-- **React Aria**
-  I prefer going as primitive as possible, but sometimes native HTML elements don’t fit the bill. For example, `input type="date"` relies on browser locale settings, which can be unreliable.
-
-  I chose React Aria because:
-
-  - It has a heavy focus on accessibility.
-  - It’s unstyled, making it easy to integrate with Tailwind.
-  - I enjoy trying new libraries! I've worked with MUI, Mantine, and DaisyUI, but not React Aria yet.
-  - Building your own date picker is a nightmare!
+- **Origin UI**
+  I like trying out different UI libraries. After my initial sketches, OirginUI seemed to cover majority of the UI elements that I will be needing for this task. The UI package itself is compatible with Tailwind and seems to be grounded on accessibility. Note: I don't think I'd use this in a real-life application without further vetting.
 
 #### Testing
 
@@ -127,8 +129,9 @@ Just writing down everything that I've done / plan to do. I'll update this as I 
 
 - Read the requirements.
 - Given the requirements, look around and think about best way to solve this assessment.
-- Steal QBTech logos off their website and create a few basic wireframes on Figma for QBAir.
 - Write a README file to organize my thoughts.
+- Steal QBTech logos off their website and create a few basic wireframes on Figma for QBAir.
+- Choose packages that I will be using based off my requirements + sketches.
 - Setup the monorepo and install all the dependencies.
 - Create UI components + Storybook - Write tests and check if adding Chromatic can be done without too much of a headache.
 - Implement business logic inside the NextJS project.

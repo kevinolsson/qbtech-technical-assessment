@@ -1,13 +1,14 @@
 import Image from 'next/image';
-import { Button, RangeCalendarExample } from 'ui';
+import { RangeCalendarExample } from 'ui';
 
 export default function Home() {
 
   return (
     <div>
       <main>
+
         <h1>Hello World</h1>
-        <Button>React Aria Button</Button>
+        <button className="bg-amber-400 dark:bg-amber-950">React Aria button</button>
         <Image src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
         <RangeCalendarExample />
         <ol>

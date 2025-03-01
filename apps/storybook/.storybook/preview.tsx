@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Preview } from '@storybook/react';
+import { themes } from '@storybook/theming';
 import 'ui/globals.css';
 
 
@@ -23,6 +24,14 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    darkMode: {
+      stylePreview: true,
+      classTarget: "div#storybook-root",
+      darkClass: "dark",
+      lightClass: "light",
+      dark: { ...themes.dark },
+      light: { ...themes.light }
+    }
   },
   decorators: [(renderStory) => <ThemeWrapper>{renderStory()}</ThemeWrapper>],
 };

@@ -1,7 +1,12 @@
 import type { Config } from 'tailwindcss';
+import path from 'path';
 
 const config: Config = {
-  content: ['../../apps/**/*.{js,ts,jsx,tsx,mdx}', './components/**/*.{js,ts,jsx,tsx,mdx}'],
+  darkMode: 'class',
+  content: [
+    path.resolve(__dirname, '../../apps/qbair/**/*.{js,ts,jsx,tsx,mdx}'),
+    path.resolve(__dirname, './components/**/*.{js,ts,jsx,tsx,mdx}'),
+  ],
   theme: {},
 };
 export default config;
