@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap');
 @import 'tailwindcss';
+
 @source "./components/";
 @source "../../apps/qbair";
+
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-noto-sans: 'Noto Sans', serif;
+  --font-sans: var(--font-noto-sans);
+}

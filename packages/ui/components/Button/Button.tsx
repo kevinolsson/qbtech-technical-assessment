@@ -5,11 +5,11 @@ interface ButtonProps extends _ButtonProps {
   variant: 'primary' | 'secondary'
 }
 
-const buttonStyle = cva(["py-3 px-9 rounded-full outline-offset-2"], {
+const buttonStyle = cva(["py-3 font-semibold px-9 rounded-full outline-offset-2 hover:cursor-pointer transition ease-out"], {
   variants: {
     variant: {
-      primary: ["bg-sky-500 text-white border-transparent", "dark:bg-amber-950"],
-      secondary: ["bg-transparent text-black border ring-black",]
+      primary: ["bg-sky-500 hover:bg-sky-600 text-white border-transparent", "dark:hover:bg-sky-400"],
+      secondary: ["bg-transparent text-gray-800 ring ring-gray-800 ",]
     }
   }
 })

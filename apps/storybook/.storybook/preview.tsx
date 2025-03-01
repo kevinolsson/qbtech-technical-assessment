@@ -4,12 +4,11 @@ import { themes } from '@storybook/theming';
 import 'ui/globals.css';
 import "ui/style.css";
 
-
 const ThemeWrapper = (props: { children: React.ReactNode }) => {
   return (
-    <>
+    <div style={{ padding: '16px' }}>
       {props.children}
-    </>
+    </div>
   );
 };
 
@@ -27,12 +26,12 @@ const preview: Preview = {
     },
     darkMode: {
       stylePreview: true,
-      classTarget: "div#storybook-root",
+      classTarget: "html, div#storybook-root",
       darkClass: "dark",
       lightClass: "light",
       dark: { ...themes.dark },
       light: { ...themes.light }
-    }
+    },
   },
   decorators: [(renderStory) => <ThemeWrapper>{renderStory()}</ThemeWrapper>],
 };
