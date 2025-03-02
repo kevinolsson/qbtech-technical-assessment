@@ -5,7 +5,6 @@ import React from 'react';
 
 interface ButtonProps extends Omit<_ButtonProps, 'children'> {
   variant?: 'primary' | 'secondary';
-  onClick?: () => void;
   loading?: boolean;
   disabled?: boolean;
   children?: React.ReactNode;

@@ -4,7 +4,10 @@
   "main": "index.ts",
   "scripts": {
     "dev": "npx @tailwindcss/cli -i ./global.css -o dist/style.css --watch --poll",
-    "build": "npx @tailwindcss/cli -i ./global.css -o dist/style.css"
+    "build": "npx @tailwindcss/cli -i ./global.css -o dist/style.css",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "author": "",
   "license": "ISC",

@@ -51,11 +51,11 @@ export const ThemeSwitcher = () => {
         document.documentElement.classList.toggle('dark', checked);
       }}
     >
-      <IconSun className={iconStyle()} />
+      <IconSun data-testid="icon-sun" className={iconStyle()} />
       <div className={trackStyle({ isDark })}>
         <div className={thumbStyle({ isDark })} />
       </div>
-      <IconMoon className={iconStyle()} />
+      <IconMoon data-testid="icon-moon" className={iconStyle()} />
     </Switch>
   );
 };

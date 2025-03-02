@@ -30,7 +30,7 @@ const alertStyle = cva(
   },
 );
 
-export const Alert = ({ children, variant, className }: AlertProps) => {
+export const Alert = ({ children, variant, className = '' }: AlertProps) => {
   return (
     <div className={`${alertStyle({ variant })} ${className}`}>
       {children}

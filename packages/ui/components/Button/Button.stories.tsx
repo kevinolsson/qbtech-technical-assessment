@@ -9,8 +9,7 @@ const meta: Meta<typeof Button> = {
   },
   tags: ['autodocs'],
   args: {
-    children: 'Button',
-    onClick: () => alert('Hello World!'),
+    onPress: () => alert('Hello World!'),
   },
 };
 

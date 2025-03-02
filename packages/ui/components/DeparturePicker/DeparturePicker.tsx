@@ -83,7 +83,7 @@ const DeparturePicker = ({
           </div>
         )}
         <div>
-          <Button className="py-1 px-4 h-full rounded-xl-r bg-white hover:cursor-pointer">
+          <Button data-testid="calendar-button" className="py-1 px-4 h-full rounded-xl-r bg-white hover:cursor-pointer">
             <IconCalendar className="w-4 h-4 stroke-gray-900" />
           </Button>
         </div>
