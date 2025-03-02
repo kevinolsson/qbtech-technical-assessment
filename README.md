@@ -18,6 +18,15 @@ These will be unpusblished after the assessment.
 - `/?departureDate=2025-06-12`
 - `/?departureDate=2025-12-12&isRoundTrip=true&returnDate=2025-12-25`
 
+### Available params:
+
+- `departureDate=a` - departure date where `a` can be a date `2025-12-25`
+- `isRoundTrip=true` - checkbox to include return trip.
+- `returnDate=b`- return date where `b` can be a date `2025-12-27`
+- `passengers=c` - where `c` is the total number of passengers tagging along.
+
+It will still accommodate invalid input from the parameter, but the form will validate as normal when you press submit.
+
 ## Installation
 
 ```bash
