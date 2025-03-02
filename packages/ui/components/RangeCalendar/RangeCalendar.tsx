@@ -1,16 +1,16 @@
 import { RangeCalendar as _RangeCalendar, type DateValue } from 'react-aria-components';
 import { CalendarContent } from '../CalendarContent/CalendarContent';
+import { today } from '@internationalized/date';
 
 interface RangeCalendarProps {
   disablePastDates?: boolean;
 }
 
 const RangeCalendar = ({ disablePastDates }: RangeCalendarProps) => {
-  const today = new Date();
   const isDateDisabled = (date: DateValue) => {
     if (disablePastDates) {
-      const dateObj = new Date(date.toString());
-      return dateObj < today;
+      const todayDate = today('Europe/Stockholm');
+      return date.compare(todayDate) < 0;
     }
     return false;
   };

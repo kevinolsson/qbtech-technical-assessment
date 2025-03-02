@@ -26,13 +26,15 @@ interface DeparturePickerProps {
   departureDate?: string;
   returnDate?: string;
   onChange?: ({ departureDate, returnDate }: { departureDate: CalendarDate; returnDate?: CalendarDate }) => void;
+  onReturnTripChange?: (isReturnTrip: boolean) => void;
   errorMessage?: string | ((validation: ValidationResult) => string);
   isInvalid?: boolean;
 }
 
 const DeparturePicker = ({
   hasReturnTrip,
-  onChange = () => {},
+  onChange = () => { },
+  onReturnTripChange = () => { },
   errorMessage,
   isInvalid,
   departureDate,
@@ -52,14 +54,19 @@ const DeparturePicker = ({
     },
   );
 
+  const handleRangeChange = (newValue: boolean) => {
+    setIsRanged(newValue);
+    onReturnTripChange(newValue);
+  };
+
   const content = (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-2">
       <Label className="font-semibold text-gray-800 dark:text-white text-base">
         {isRanged ? 'Choose departure and return dates' : 'Choose departure date'}
       </Label>
       <Group className={inputStyle({ isInvalid })}>
         <div className="py-1 px-4 flex-1">
-          <Checkbox isSelected={isRanged} onChange={setIsRanged} className="font-normal">
+          <Checkbox isSelected={isRanged} onChange={handleRangeChange} className="font-normal">
             Return Trip
           </Checkbox>
         </div>
@@ -76,7 +83,7 @@ const DeparturePicker = ({
           </div>
         )}
         <div>
-          <Button className="py-1 px-4 h-full bg-white hover:cursor-pointer">
+          <Button className="py-1 px-4 h-full rounded bg-white hover:cursor-pointer">
             <IconCalendar className="w-4 h-4 stroke-gray-900" />
           </Button>
         </div>
@@ -105,7 +112,7 @@ const DeparturePicker = ({
           {content}
           <Popover>
             <Dialog className="border bg-white dark:bg-gray-800 border-gray-400 rounded p-4 shadow">
-              <RangeCalendar />
+              <RangeCalendar disablePastDates />
             </Dialog>
           </Popover>
         </DateRangePicker>
@@ -128,7 +135,7 @@ const DeparturePicker = ({
           {content}
           <Popover>
             <Dialog className="border bg-white dark:bg-gray-800 border-gray-400 rounded p-4 shadow">
-              <Calendar />
+              <Calendar disablePastDates />
             </Dialog>
           </Popover>
         </DatePicker>

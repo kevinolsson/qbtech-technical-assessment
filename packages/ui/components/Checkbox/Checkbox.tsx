@@ -8,7 +8,7 @@ const Checkbox = ({ children, className, isSelected, ...props }: CheckboxProps) 
     {
       variants: {
         isSelected: {
-          true: 'border border-brand bg-brand',
+          true: 'border !border-brand bg-brand',
           false: null,
         },
       },
@@ -18,7 +18,7 @@ const Checkbox = ({ children, className, isSelected, ...props }: CheckboxProps) 
   return (
     <_Checkbox
       {...props}
-      className={`w-fit flex focus-within:outline-2 outline-blue-800 outline-offset-2 gap-1 items-center text-gray-800 dark:text-white ${className}`}
+      className={`w-fit flex focus-within:outline-2 outline-blue-800 outline-offset-2 gap-2 items-center text-gray-800 dark:text-white ${className}`}
     >
       <>
         <div className={checkboxStyle({ isSelected })}>

@@ -8,6 +8,10 @@ const meta: Meta<typeof Button> = {
     layout: 'fullscreen',
   },
   tags: ['autodocs'],
+  args: {
+    children: 'Button',
+    onClick: () => alert('Hello World!'),
+  },
 };
 
 export default meta;
@@ -15,20 +19,29 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    children: 'Button',
     variant: 'primary',
-    onClick: () => {
-      alert('Hello World!');
-    },
+    children: 'Primary Button',
   },
 };
 
-export const secondary: Story = {
+export const Secondary: Story = {
   args: {
-    children: 'Secondary Button',
     variant: 'secondary',
-    onClick: () => {
-      alert('Hello World!');
-    },
+    children: 'Secondary Button',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+    children: 'Disabled Button',
+  },
+};
+
+
+export const Loading: Story = {
+  args: {
+    loading: true,
+    children: 'Loading Button',
   },
 };

@@ -16,7 +16,3 @@ type Story = StoryObj<typeof RangeCalendar>;
 export const Default: Story = {
   args: {},
 };
-
-export const defaultDates: Story = {
-  args: {},
-};

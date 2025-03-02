@@ -15,6 +15,7 @@ type Story = StoryObj<typeof Card>;
 
 export const Default: Story = {
   args: {
+    className: 'p-6',
     children: (
       <>
         <div>

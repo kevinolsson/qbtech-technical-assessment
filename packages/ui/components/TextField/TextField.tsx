@@ -27,7 +27,7 @@ const TextField = ({ leftIcon, label, errorMessage, isInvalid, ...forwardProps }
   );
 
   return (
-    <_TextField className="flex flex-col gap-1" isInvalid={isInvalid} {...forwardProps}>
+    <_TextField className="flex flex-col gap-2" isInvalid={isInvalid} {...forwardProps}>
       <Label>{label}</Label>
       <div className={inputStyle({ isInvalid })}>
         {leftIcon}

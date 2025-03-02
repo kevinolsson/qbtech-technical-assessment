@@ -7,10 +7,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
 
 const Card = ({ className = '', children, ...forwardProps }: CardProps) => {
   return (
-    <div
-      className={`flex flex-col gap-6 rounded-xl p-4 bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-200 ${className}`}
-      {...forwardProps}
-    >
+    <div className={`rounded-xl border-0 bg-white dark:bg-gray-800 shadow-lg ${className}`} {...forwardProps}>
       {children}
     </div>
   );
