@@ -39,9 +39,9 @@ const NumberField = ({
     >
       <Label>{label}</Label>
       <Group className={inputStyle({ isInvalid })}>
-        <div className="py-1 px-4">
+        <div>
           <Button
-            className="bg-white hover:cursor-pointer"
+            className="bg-white py-1 px-4 rounded-xl-sm h-full hover:cursor-pointer"
             slot="decrement"
             onPress={onDecrement}
           >
@@ -51,10 +51,10 @@ const NumberField = ({
         <div className="py-1 px-4 flex-1">
           <Input className="text-center w-full" />
         </div>
-        <div className="py-1 px-4">
+        <div>
           <Button
             slot="increment"
-            className="bg-white hover:cursor-pointer"
+            className="bg-white py-1 px-4 rounded-xl-r h-full hover:cursor-pointer"
             onPress={onIncrement}
           >
             <IconPlus className="w-4 h-4 stroke-gray-900" />

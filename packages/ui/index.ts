@@ -8,3 +8,4 @@ export { TextField } from './components/TextField/TextField';
 export { NumberField } from './components/NumberField/NumberField';
 export { Card } from './components/Card/Card';
 export { Alert } from './components/Alert/Alert';
+export { ThemeSwitcher } from './components/ThemeSwitcher/ThemeSwitcher';

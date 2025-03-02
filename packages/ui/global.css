@@ -19,6 +19,7 @@
   h2,
   h3,
   p,
+  a,
   label {
     @apply max-w-[60ch] text-gray-900 dark:text-white;
   }

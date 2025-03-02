@@ -5,7 +5,7 @@ export default function Book() {
     <DepartureSummary />
     <div>
       <h1 className="text-2xl md:text-3xl font-semibold">Passenger Information</h1>
-      <p className="text-gray-500">You&apos;re almost done! We just need your fake passenger information before we&apos;re set!</p>
+      <p>You&apos;re almost done! We just need your fake passenger information before we&apos;re set!</p>
     </div>
     <PassengerForm />
   </section>;

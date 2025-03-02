@@ -5,7 +5,7 @@ import { Card, Logo } from 'ui';
 export default function BookingLayout({ children }: { children: React.ReactNode }) {
   return (<PassengerFormProvider>
     <div
-      className="bg-gray-100 w-full min-h-dvh h-full py-24"
+      className="bg-gray-100 dark:bg-gray-900 w-full min-h-dvh h-full py-24"
     >
       <div className="max-w-4xl mx-auto flex flex-col gap-4 h-full">
         <Logo />
