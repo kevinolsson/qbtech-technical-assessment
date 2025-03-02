@@ -1,15 +1,12 @@
 import Image from 'next/image';
-import { RangeCalendarExample } from 'ui';
 
 export default function Home() {
-
   return (
     <div>
       <main>
         <h1>Hello World</h1>
         <button className="flex flex-col gap-4 p-10">React Aria button</button>
         <Image src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
-        <RangeCalendarExample />
         <ol>
           <li>
             Get started by editing <code>src/app/page.tsx</code>.

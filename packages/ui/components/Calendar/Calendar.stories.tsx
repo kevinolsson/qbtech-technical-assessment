@@ -1,9 +1,9 @@
-import { RangeCalendar } from './RangeCalendar';
+import { Calendar } from './Calendar';
 import type { Meta, StoryObj } from '@storybook/react';
 
-const meta: Meta<typeof RangeCalendar> = {
-  title: 'Atoms/RangeCalendar',
-  component: RangeCalendar,
+const meta: Meta<typeof Calendar> = {
+  title: 'Atoms/Calendar',
+  component: Calendar,
   parameters: {
     layout: 'fullscreen',
   },
@@ -11,7 +11,7 @@ const meta: Meta<typeof RangeCalendar> = {
 };
 
 export default meta;
-type Story = StoryObj<typeof RangeCalendar>;
+type Story = StoryObj<typeof Calendar>;
 
 export const Default: Story = {
   args: {},
