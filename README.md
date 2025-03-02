@@ -1,3 +1,7 @@
+# Note from the applicant
+
+Hi! I genuinely enjoyed working on this assignment. I usually try new UI libraries whenever I do assessments, I think it's fun! For this assignment, I decided to go with react-aria. Needless to say, it did make my life more difficult as it's a bit different from the more commonly used UI libraries! I probably spent too much time re-implementing the calendar with this library instead of using one of the readily-built ones.
+
 # QBTech Technical Assessment
 
 This monorepo contains my submission for the QBTech technical assessment for Senior Software Engineer Frontend.
@@ -70,7 +74,7 @@ These features are not explicitly required but I've included to enhance the subm
 
 - **Dark mode** - Implemented dark mode using Tailwind `:dark` variant.
 - **Storybook** - Deployed to showcase the proper breakdown of components into Atoms, Molecules, and Organisms. I like nicely organized projects!
-- **Tests** - Because writing tests is important! (IIRC I don't recall finding this in the requirements!)
+- **Tests** - (Update: I ran out of time.) Because writing tests is important! (IIRC I don't recall finding this in the requirements!)
 
 ### Limitations
 
@@ -80,6 +84,8 @@ Due to time constraints, the following will not be implemented:
 - **Destination selection or flight selection from a table.** These features will not be included.
 - **Database persistence.** Data will not be saved to a database, though this can be revisited if needed.
 - **Additional receipts.** The confirmation page will serve as the only receipt; no receipts will be sent via email.
+- **A11y testing.** Accessibility is very important, but due to the lack of time, I was not able to fully check the site with a screen-reader like NVDA.
+- **Full test coverage.**. Also ran out of time!
 
 ### Project Structure
 
