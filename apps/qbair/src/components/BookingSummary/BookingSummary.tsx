@@ -3,12 +3,19 @@ import { usePassengerFormContext } from "@/contexts/PassengerFormContext/Passeng
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Alert } from 'ui';
+import { useEffect } from 'react';
 
 export const BookingSummary = () => {
   const { formData } = usePassengerFormContext();
 
+  useEffect(() => {
+    if (!formData) {
+      redirect('/');
+    }
+  }, [formData]);
+
   if (!formData) {
-    redirect('/');
+    return null;
   }
 
   const { departureDate, returnDate, passengers } = formData;
