@@ -6,7 +6,12 @@ Hi! I genuinely enjoyed working on this assignment. I usually try new UI librari
 
 This monorepo contains my submission for the QBTech technical assessment for Senior Software Engineer Frontend.
 
-You can visit the deployed project [here](https://qbtech-technical-assessment.vercel.app/). This project will be unpublished after the assessment is over.
+## Demo Links
+
+These will be unpusblished after the assessment.
+
+- [QBAir Assessment](https://qbtech-assessment-olsson.vercel.app/)
+- [Storybook](https://qbtech-storybook-git-main-olsson.vercel.app/?path=/docs/atoms-alert--docs)
 
 ## Installation
 
