@@ -118,10 +118,12 @@ const DepartureForm = () => {
           }
         }}
       />
-      <Button loading={isLoading} type="submit">Book Trip</Button>
-      <p className="text-sm opacity-50 max-w-2/3">
-        You will be asked to enter (fake) passenger information in the next step.
-      </p>
+      <div className="flex flex-col md:flex-row text-left gap-4 justify-center items-center">
+        <Button loading={isLoading} type="submit">Book Trip</Button>
+        <p className="text-sm opacity-50 md:max-w-2/3">
+          You will be asked to enter (fake) passenger information in the next step.
+        </p>
+      </div>
     </Form>
   );
 };

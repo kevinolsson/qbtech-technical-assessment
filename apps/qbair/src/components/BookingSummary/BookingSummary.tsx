@@ -58,8 +58,10 @@ export const BookingSummary = () => {
       ))}
     </div>
     <hr className="border-gray-300" />
-    <Link href="/" className="underline">
-      Back to home
-    </Link>
+    <div className="flex flex-col md:flex-row gap-4 items-center">
+      <Link href="/" className="underline">
+        Back to home
+      </Link>
+    </div>
   </div>
 }

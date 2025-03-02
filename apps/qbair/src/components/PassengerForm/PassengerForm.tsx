@@ -37,9 +37,7 @@ export const PassengerForm = () => {
   const { register, formState: { errors }, handleSubmit, setValue } = form;
 
   const onSubmit = (data: FormValues) => {
-    console.log({ data })
     startTransition(() => {
-      console.log({ data, departureDate, returnDate });
       setFormData({ ...data, departureDate, returnDate });
       // I should probably be doing something smart here to make sure the data is valid (hash??)
       // but at the same time, I've spent way more than what I had originally planned on this assessment
@@ -47,12 +45,14 @@ export const PassengerForm = () => {
     });
   };
 
+  console.log({ errors })
+
   return (
     <Form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       {Array.from({ length: passengerCount }).map((_, index) => (
         <div key={index} className="space-y-4 rounded-lg">
           <h3>Passenger {index + 1}</h3>
-          <div className="space-y-2 w-1/2">
+          <div className="space-y-2 md:w-1/2">
             <TextField
               {...register(`passengers.${index}.name`)}
               label="Full Name"
@@ -77,7 +77,7 @@ export const PassengerForm = () => {
           <hr className="mt-8 border-gray-300" />
         </div>
       ))}
-      <div className="flex flex-row gap-4 items-center" >
+      <div className="flex flex-col md:flex-row gap-4 items-center" >
         <Button type="submit" loading={isLoading}>Complete Booking</Button>
         <Link className="underline" href="/">Go back</Link>
       </div>

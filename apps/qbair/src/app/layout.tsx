@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`min-h-dvh h-full ${notoSans.variable}`}>
-        <div className="absolute z-10 top-4 right-4 bg-white dark:bg-gray-900 rounded-full p-2">
+        <div className="absolute z-20 top-4 right-4 bg-white dark:bg-gray-900 rounded-full p-2">
           <ThemeSwitcher />
         </div>
         {children}

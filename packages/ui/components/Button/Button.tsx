@@ -11,7 +11,7 @@ interface ButtonProps extends Omit<_ButtonProps, 'children'> {
 }
 
 const buttonStyle = cva(
-  ['py-3 font-semibold px-9 rounded-full outline-offset-2 transition ease-out flex items-center justify-center gap-2'],
+  ['whitespace-nowrap py-3 font-semibold px-9 rounded-full outline-offset-2 transition ease-out flex items-center justify-center gap-2'],
   {
     variants: {
       variant: {

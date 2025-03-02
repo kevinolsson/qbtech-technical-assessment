@@ -16,7 +16,7 @@ const RangeCalendar = ({ disablePastDates }: RangeCalendarProps) => {
   };
 
   return (
-    <div className="flex flex-row gap-4">
+    <div className="flex flex-col md:flex-row gap-4">
       <_RangeCalendar
         className="flex flex-col gap-4"
         visibleDuration={{ months: 2 }}

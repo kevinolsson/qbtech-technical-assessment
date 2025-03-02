@@ -13,6 +13,11 @@ These will be unpusblished after the assessment.
 - [QBAir Assessment](https://qbtech-assessment-olsson.vercel.app/)
 - [Storybook](https://qbtech-storybook-git-main-olsson.vercel.app/?path=/docs/atoms-alert--docs)
 
+## Test with the following params:
+
+- `/?departureDate=2025-06-12`
+- `/?departureDate=2025-12-12&isRoundTrip=true&returnDate=2025-12-25`
+
 ## Installation
 
 ```bash

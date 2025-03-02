@@ -20,7 +20,7 @@ const CalendarContent = ({ isRanged }: CalendarContent) => {
           <IconArrowRight className="stroke-gray-800 dark:stroke-white" />
         </Button>
       </header>
-      <div className="flex flex-row gap-8 items-start">
+      <div className="flex flex-col md:flex-row gap-8 items-start">
         <CalendarGrid offset={{ months: 0 }}>
           <CalendarGridHeader>{(day) => <CalendarHeaderCell>{day}</CalendarHeaderCell>}</CalendarGridHeader>
           <CalendarGridBody>{(date) => <CalendarCell isRanged={isRanged} date={date} />}</CalendarGridBody>

@@ -1,6 +1,12 @@
 import { PassengerForm } from "@/components/PassengerForm/PassengerForm";
 import { DepartureSummary } from "@/components/DepartureSummary/DepartureSummary";
 import { Suspense } from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'QBair - Passenger Information - Technical Assessment',
+};
+
 
 export default function Book() {
   return <section className="flex flex-col gap-6">

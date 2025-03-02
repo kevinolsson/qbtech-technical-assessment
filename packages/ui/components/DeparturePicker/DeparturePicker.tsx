@@ -43,7 +43,7 @@ const DeparturePicker = ({
   const [isRanged, setIsRanged] = useState(hasReturnTrip);
 
   const inputStyle = cva(
-    ['flex flex-row rounded divide-x-1 divide-gray-400', 'border border-gray-400 dark:border-gray-100 dark:text-white'],
+    ['flex flex-col md:flex-row rounded divide-y-1 md:divide-x-1 divide-gray-400', 'border border-gray-400 dark:border-gray-100 dark:text-white'],
     {
       variants: {
         isInvalid: {
@@ -65,25 +65,25 @@ const DeparturePicker = ({
         {isRanged ? 'Choose departure and return dates' : 'Choose departure date'}
       </Label>
       <Group className={inputStyle({ isInvalid })}>
-        <div className="py-1 px-4 flex-1">
+        <div className="py-1 px-4 flex-1 flex justify-center">
           <Checkbox isSelected={isRanged} onChange={handleRangeChange} className="font-normal">
             Return Trip
           </Checkbox>
         </div>
-        <div className="py-1 px-4 flex-1">
+        <div className="py-1 px-4 flex-1 flex justify-center">
           <DateInput className="flex flex-row" slot="start">
             {(segment) => <DateSegment className="outline-offset-2" segment={segment} />}
           </DateInput>
         </div>
         {isRanged && (
-          <div className="py-1 px-4 flex-1">
+          <div className="py-1 px-4 flex-1 flex justify-center">
             <DateInput className="flex flex-row" slot="end">
               {(segment) => <DateSegment className="outline-offset-2" segment={segment} />}
             </DateInput>
           </div>
         )}
         <div>
-          <Button data-testid="calendar-button" className="py-1 px-4 h-full rounded-xl-r bg-white hover:cursor-pointer">
+          <Button data-testid="calendar-button" className="py-1 px-4 w-full flex items-center justify-center md:w-auto h-full rounded-xl-r bg-white hover:cursor-pointer">
             <IconCalendar className="w-4 h-4 stroke-gray-900" />
           </Button>
         </div>
