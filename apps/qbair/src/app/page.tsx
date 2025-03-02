@@ -1,7 +1,7 @@
 import { DepartureForm } from '@/components/DepartureForm/DepartureForm';
 import Image from 'next/image';
 import { Card, Logo } from 'ui';
-
+import { Suspense } from 'react';
 export default function Home() {
   return (
     <>
@@ -18,7 +18,9 @@ export default function Home() {
                   unpublished after the entire assessment process.
                 </p>
               </div>
-              <DepartureForm />
+              <Suspense>
+                <DepartureForm />
+              </Suspense>
             </section>
             <div className="relative w-1/3">
               <Image src="/foreground.jpg" fill alt="foreground" className="object-cover bg-center" priority />
